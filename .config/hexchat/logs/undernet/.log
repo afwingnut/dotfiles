@@ -1,0 +1,10 @@
+**** BEGIN LOGGING AT Sat Oct  7 05:55:43 2023
+
+Oct 07 05:55:43 Failed loading notification plugin: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+Oct 07 05:55:43 *	Connecting to us.undernet.org (199.71.214.87:6697)
+Oct 07 05:58:28 Unknown Command disconnect. Try /help
+Oct 07 05:58:34 Sysinfo plugin unloaded
+Oct 07 05:58:34 FiSHLiM plugin unloaded
+Oct 07 05:58:34 Checksum plugin unloaded
+**** ENDING LOGGING AT Sat Oct  7 05:58:34 2023
+

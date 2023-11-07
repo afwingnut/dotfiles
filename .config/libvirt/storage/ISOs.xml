@@ -1,0 +1,19 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh pool-edit ISOs
+or other application using the libvirt API.
+-->
+
+<pool type='dir'>
+  <name>ISOs</name>
+  <uuid>8a8bcb88-4c62-407e-8690-bbe18d593ece</uuid>
+  <capacity unit='bytes'>0</capacity>
+  <allocation unit='bytes'>0</allocation>
+  <available unit='bytes'>0</available>
+  <source>
+  </source>
+  <target>
+    <path>/home/wingnut/Downloads/ISOs</path>
+  </target>
+</pool>
