@@ -106,13 +106,13 @@ alias zzz='sudo zzz'
 #alias insta='instaloader --login one_to_mini :saved --no-metadata-json --no-video-thumbnail'
 # Git Stuff:
 
-alias gt='git clone'
-alias gs='git status'
-alias gm='git commit -m'
-alias gc='git clean'
-alias gr='git restore'
-alias ga='git add .'
-alias gp='git push'
+alias gclone='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME clone'
+alias gstat='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME status'
+alias gcom='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME commit -m'
+alias gclean='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME clean'
+alias grest='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME restore'
+alias gadd='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME add'
+alias gpush='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME push'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Download:
