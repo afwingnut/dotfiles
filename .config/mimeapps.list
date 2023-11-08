@@ -1,6 +1,0 @@
-[Added Associations]
-text/plain=nvim.desktop;
-application/vnd.ms-publisher=nvim.desktop;
-
-[Default Applications]
-application/vnd.ms-publisher=nvim.desktop
