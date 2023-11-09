@@ -69,16 +69,12 @@ static const Rule rules[] = {
 	 */
     /* class              instance          title                 tags mask       isfloating     isterminal   noswallow    monitor */
 
-    {"discord",             NULL,           NULL, 	          1 << 3, 	    False, 	     0,         -1,       -1},
     {"Surf", 	            NULL,           NULL, 	          1 << 3, 	    False, 	     0,          0,       -1},
     {"firefox",             NULL,           NULL, 	          1 << 3, 	    False, 	     0,         -1,       -1},
-    {"obs",                 NULL,           NULL, 	          1 << 7, 	    False, 	     0,         -1,       -1},
-    {"Surf",                NULL,           NULL, 	          1 << 3, 	    False, 	     0,         -1,       -1},
     {"Virt-manager", 	    NULL,           NULL, 	          1 << 8, 	    False, 	     0,         -1,       -1},
     {"Chromium", 	    NULL,           NULL, 	          1 << 1, 	    False, 	     0,         -1,       -1},
     {"Transmission-gtk",    NULL,           NULL, 	          1 << 5, 	    False, 	     0,         -1,       -1},
     {"Gimp", 	            NULL,           NULL, 	          1 << 5, 	    False, 	     0,         -1,       -1},
-    {"kdenlive", 	    NULL,           NULL, 	          1 << 3, 	    False, 	     0,         -1,       -1},
     {"st",                  NULL,           "ranger",             1 << 6, 	    False,           0,         -1,       -1},
     {"qutebrowser", 	    NULL,           NULL, 	          1 << 3, 	    False,           0,         -1,       -1},
     {"st",                  NULL,           NULL, 	          0,                0,               1,         1,        -1},
@@ -113,6 +109,22 @@ static const Layout layouts[]   = {
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
+/* key definitions germane to special buttons on my Dell Multimedia Keyboard */
+#define XF86HomePage         0x1008ff18
+#define XF86Mail             0x1008ff19
+#define XF86Explorer         0x1008ff5d
+#define XF86Calculator       0x1008ff1d
+#define XF86AudioPrev        0x1008ff16
+#define XF86AudioPlay        0x1008ff14
+#define XF86AudioNext        0x1008ff17
+#define XF86AudioMute        0x1008ff12
+#define XF86AudioLowerVolume 0x100ff11
+#define XF86AudioRaiseVolume 0x100ff13
+#define XF86Tools            0x1008ff81
+#define XF86Sleep            0x1008ff2f
+
+
+
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
@@ -139,6 +151,7 @@ static const char *next[]           = { "mpc", "next", NULL };
 static const char *prev[]           = { "mpc", "prev", NULL };
 static const char *searchcmd[]      = { "search", NULL };
 static const char *dowcmd[]         = { "down", NULL };
+static const char *sleepcmd[] 	    = { "st", "-e", "zzz" , NULL };
 static const Key keys[] = {
 
 	/* modifier                  key                      function                 argument */
@@ -185,12 +198,13 @@ static const Key keys[] = {
 	{MODKEY|ShiftMask,          XK_g,                       setgaps,                {.i = GAP_RESET } },
 	{MODKEY|ShiftMask,          XK_h,                       setgaps,                {.i = GAP_TOGGLE} },
 	{MODKEY|ShiftMask, 	    XK_c, 		        killclient, 	        {0}},
-	{0, 		            XK_F3, 		        spawn, 		        {.v = up}},
-	{0, 		            XK_F2, 		        spawn, 		        {.v = down}},
-	{0, 		            XK_F4, 		        spawn, 		        {.v = mut}},
-	{0, 		            XK_F6, 		        spawn, 		        {.v = toggle}},
-	{0, 		            XK_F8, 		        spawn, 		        {.v = next}},
-	{0, 		            XK_F7, 		        spawn, 		        {.v = prev}},
+	{0, 		            XF86AudioRaiseVolume, 	spawn, 		        {.v = up}},
+	{0, 		            XF86AudioLowerVolume,       spawn, 		        {.v = down}},
+	{0, 		            XF86AudioMute, 	        spawn, 		        {.v = mut}},
+	{0, 		            XF86Tools,	                spawn, 		        {.v = toggle}},
+	{0, 		            XF86AudioNext,	        spawn, 		        {.v = next}},
+	{0, 		            XF86AudioPrev, 	        spawn, 		        {.v = prev}},
+	{0, 			    XF86Sleep, 			spawn, 			{.v = sleepcmd}},
 	{MODKEY|ShiftMask,          XK_q,                       quit,                   {0} },
 	TAGKEYS(                    XK_1,                       0)
 	TAGKEYS(                    XK_2,                       1)
