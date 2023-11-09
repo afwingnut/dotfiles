@@ -1,0 +1,1 @@
+1. Find out how to map your multimedia keys to either mpc or another suitable audio player.  Perhaps you need to source a keymap file like this guydid {https://github.com/hoffoo/dwm/blob/master/config.h}
