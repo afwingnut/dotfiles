@@ -19,7 +19,8 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' (add thi
 exec bash
 
 config config --local status.showUntrackedFiles no
-------------------
+
+-------------------
 Basic usage example:
 
 config add /path/to/file
