@@ -109,7 +109,7 @@ static const Layout layouts[]   = {
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
-/* key definitions germane to special buttons on my Dell Multimedia Keyboard */
+/* key definitions germane to special buttons on my Dell KB-522 Keyboard */
 #define XF86HomePage         0x1008ff18
 #define XF86Mail             0x1008ff19
 #define XF86Explorer         0x1008ff5d
