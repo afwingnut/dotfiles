@@ -151,7 +151,7 @@ static const char *next[]           = { "mpc", "next", NULL };
 static const char *prev[]           = { "mpc", "prev", NULL };
 static const char *searchcmd[]      = { "search", NULL };
 static const char *dowcmd[]         = { "down", NULL };
-static const char *sleepcmd[] 	    = { "st", "-e", "zzz" , NULL };
+static const char *sleepcmd[] 	    = { "st", "-e", "zzz", NULL };
 static const Key keys[] = {
 
 	/* modifier                  key                      function                 argument */
