@@ -16,6 +16,7 @@ export BROWSER='chromium'
 export EDITOR='nvim'
 export XDG_RUNTIME_DIR='/tmp/runtime-dir/'
 export PATH="$HOME/.local/bin:$PATH"
+export READER='zathura'
 #export PATH="/usr/bin:$PATH"
 
 # get current branch in git repo

@@ -6,7 +6,7 @@ scrolloff 10
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
 #
-browser w3m
+browser "w3m %u"
 player mpv
 macro m set browser "mpv %u"; open-in-browser ; set browser "w3m %u"
 
