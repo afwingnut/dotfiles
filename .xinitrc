@@ -3,6 +3,8 @@
 picom &
 clipmenud &
 dunst &
+pia-client &
+
 #slstatus &
 ./.fehbg &
 while true; do

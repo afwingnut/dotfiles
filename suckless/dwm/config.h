@@ -61,7 +61,8 @@ static const char *const autostart[] = {
 };
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", "", "", "", ""};
+/* Use font-manager app to view installed fonts and then select one you want to use*/
+static const char *tags[] = {"","", "", "", "", "", "", "", ""};
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -138,7 +139,7 @@ static const char *rancmd[]         = { "st", "-e", "ranger", NULL };
 static const char *lockcmd[]        = { "slock", NULL };
 static const char *screcmd[]        = { "scrot", "/home/sh/Images/ScreenShots/shot-%Y-%m-%d-%H-%M-%S.jpg", NULL };
 static const char *virtcmd[]        = { "virt-manager", NULL };
-static const char *chrocmd[]        = { "chromium", NULL };
+static const char *chrocmd[]        = { "firefox", NULL };
 static const char *boatcmd[]        = { "st", "-e", "newsboat", NULL };
 static const char *ytcmd[]          = { "ytfzf", "-D", NULL };
 static const char *ytdcmd[]         = { "ytfzf", "-d", "-D", NULL };
