@@ -12,7 +12,7 @@ bind 'set completion-ignore-case on'
 # Exports:
 
 export TERMINAL='st'
-export BROWSER='chromium'
+export BROWSER='firefox'
 export EDITOR='nvim'
 export XDG_RUNTIME_DIR='/tmp/runtime-dir/'
 export PATH="$HOME/.local/bin:$PATH"
