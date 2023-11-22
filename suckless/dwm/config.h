@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+/* Check out bakkeby's dwm-commented git hub page to shed light on many commands below. */
 
 /* appearance */
 static const unsigned int borderpx     = 0;        /* border pixel of windows */
@@ -11,7 +12,7 @@ static const int topbar                = 1;        /* 0 means bottom bar */
 static const int user_bh               = 0;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const int vertpad               = 2;       /* vertical padding of bar */
 static const int sidepad               = 4;       /* horizontal padding of bar */
-static const char *fonts[]             = { "terminus:style=Bold:size=18" };
+static const char *fonts[]             = { "terminus:style=Bold:size=18" };   /* cf. Bakkeby's dwm-commented git site for helpful info here.*/
 static const char dmenufont[]          = "monospace:size=14";
 static const char col_gray1[]          = "#000000";
 static const char col_gray2[]          = "#444444";
@@ -34,7 +35,7 @@ static const unsigned int alphas[][3]  = {
 typedef struct {
 	const char *name;
 	const void *cmd;
-} Sp;
+} Sp;  /* Spawn a popup with functionality as defined below*/
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x28", NULL };
 const char *spcmd2[] = {"st", "-n", "spfm", "-g", "124x30", "-e", "ranger", NULL };
 const char *spcmd3[] = {"st", "-n", "spncm", "-g", "120x30", "-e", "ncmpcpp", NULL };
@@ -62,7 +63,7 @@ static const char *const autostart[] = {
 
 /* tagging */
 /* Use font-manager app to view installed fonts and then select one you want to use*/
-static const char *tags[] = {"","", "", "", "", "", "", "", ""};
+static const char *tags[] = {"", "", "", "", "", "", "", "", ""};
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
