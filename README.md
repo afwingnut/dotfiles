@@ -2,7 +2,7 @@
 Dotfiles for my Void desktop.
 
 
-Use config (an alias in your .bashrc) instead of git for typical git operations.
+Use config (gadd, gcom, and gpush aliases in your .bashrc) instead of git for typical git operations.
 
 STRAIGHT FROM Derek Taylor's YouTube video (https://www.youtube.com/watch?v=tBoLDpTWVOM)
 
