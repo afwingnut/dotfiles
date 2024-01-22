@@ -25,8 +25,11 @@ config config --local status.showUntrackedFiles no
 Basic usage example:
 
 gstat
+
 gadd /path/to/file
+
 gcom "A short message"
+
 gpush
 
 WHAT'S THE REASON FOR THE GIT BARE REPO?
