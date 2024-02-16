@@ -76,7 +76,7 @@ alias q='xbps-query -Rs'
 alias u='sudo xbps-install -Su'
 alias i='sudo xbps-install -S'
 alias c='sudo xbps-remove -o && sudo xbps-remove -O'
-alias d='sudo xbps-remove'
+alias dp='sudo xbps-remove'
 
 # Other:
 alias l='lsd -al'
