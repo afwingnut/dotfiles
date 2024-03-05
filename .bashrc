@@ -92,8 +92,8 @@ alias cat='bat --style=plain'
 alias e="emacs"
 # alias mn="sudo mount /dev/sdc1 Usb/"
 # alias um="sudo umount /dev/sdc1"
-#alias p='sudo poweroff'
-#alias r='sudo reboot'
+alias poff='sudo poweroff'
+alias rbt='sudo reboot'
 alias mci='sudo make clean install'
 alias m='mpv'
 alias htop='htop -t'
