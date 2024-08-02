@@ -80,6 +80,7 @@ alias dp='sudo xbps-remove'
 
 # Other:
 alias l='lsd -al'
+alias la='lsd -al'
 alias ll='lsd -a'
 alias ls='lsd --color=auto'
 alias lh='lsd -hl'
