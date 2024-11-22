@@ -104,6 +104,7 @@ alias vim='nvim'
 alias neofetch='neofetch --ascii ascii.txt'
 alias ufetch='ufetch | lolcat'
 alias grep='ugrep'
+# suspend operation for void is 'zzz'
 alias zzz='sudo zzz'
 #alias insta='instaloader --login one_to_mini :saved --no-metadata-json --no-video-thumbnail'
 # Git Stuff:
