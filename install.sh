@@ -18,7 +18,7 @@ for PACKAGE in "${PACKAGES[@]}"; do
 done
 
 # Test whether all packages installed before proceeding
-if [ -s "./uninstallable_packages" ]; then
+if [ -s "uninstallable_packages" ]; then
   echo "Notification: The file uninstallable_packages exists and is not empty."
   exit 0
 fi
