@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # This is my install script.  Once you set up your github dotfiles then change the git clone commands below to use your own.
 #
@@ -15,6 +16,13 @@ for PACKAGE in "${PACKAGES[@]}"; do
         echo "$PACKAGE" >> uninstallable_packages
     fi
 done
+
+# Test whether all packages installed before proceeding
+if [ -s "./uninstallable_packages" ]; then
+  echo "Notification: The file uninstallable_packages exists and is not empty."
+  exit 0
+fi
+# Safe to proceed
 
 cd /tmp/
 git clone https://github.com/pijulius/picom.git
