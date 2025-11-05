@@ -7,7 +7,7 @@ sudo xbps-install -Suy
 PACKAGES=(alacritty alsa-utils arandr aria2 audacity base-devel bash-completion bat breeze bridge-utils cava chromium clang clang-analyzer clipmenu cloc cmake cmatrix colordiff curl cvs dunst feh ffmpeg ffplay figlet figlet-fonts file-devel firefox flac flameshot fzf gcr-devel gdb gimp go gstreamer1-devel gstreamer-vaapi harfbuzz-devel htop hugo ImageMagick imlib2-devel inkscape instaloader intel-media-driver jq lf libconfig-devel libev-devel libjpeg-turbo-devel libmpc-devel libvirt libX11-devel libXft-devel libXinerama-devel linux-lts linux-lts-headers lolcat-c lsd lxappearance man-db meson mpc mpd mpv mupdf ncmpcpp neofetch neovim nerd-fonts NetworkManager newsboat nim ninja nodejs noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf ntfs-3g obs pandoc papirus-folders papirus-icon-theme pass passmenu pcre-devel pcre-devel pdftag pkgconf pkgconf-devel python3-adblock python3-pip qemu qutebrowser ranger readline readline-devel rnnoise rsync sakura screenkey scrot simple-mtpfs slop socklog-voidtcc terminus-font texlive texlive-core time timeshift tmux tty-clock ueberzug ugrep unbound uthash v4l2loopback vde2 virt-manager void-docs-browse vte3 w3m wbg webkit2gtk-devel wkhtmltopdf wlroots-devel xcb-util-image-devel xcb-util-renderutil-devel xdg-desktop-portal-wlr xdotool xorg yt-dlp zathura zathura-pdf-mupdf zig)# Loop through each package in the list
 for PACKAGE in "${PACKAGES[@]}"; do
     # Check if package is available in the repository
-    if xbps-query -Rn "$PACKAGE" &> /dev/null; then
+    if xbps-query -R "$PACKAGE" &> /dev/null; then
         echo "Installing $PACKAGE"
         xbps-install -y "$PACKAGE"
     else
@@ -23,6 +23,10 @@ if [ -s "uninstallable_packages" ]; then
   exit 0
 fi
 # Safe to proceed
+read -p "Are you sure you want to continue? (y/n) "
+if [ "$REPLY" = "y" ]; then
+  # Proceed with the script
+fi
 
 cd /tmp/
 git clone https://github.com/pijulius/picom.git
